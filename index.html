@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>My Form</title>
+    <link rel="stylesheet" href="./css/main.css">
+  </head>
+  
+  <body>
+    <div class="my-form">
+      <form>
+        <div class="form-line">
+          <div class="the-labels">
+            <label for="fname">First Name:</label>
+          </div>
+          <div class="the-input">
+            <input type="text" name="fname" required>
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="the-labels">
+            <label for="lname">Last Name:</label>
+          </div>
+          <div class="the-input">
+            <input type="text" name="lname" required>
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="the-labels">
+            <label for="age">Age:</label>
+          </div>
+          <div class="the-input">
+            <input type="number" name="age">
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="the-labels">
+            <label for="color">Favorite Color:</label>
+          </div>
+          <div class="the-input">
+            <input type="text" name="color">
+          </div>
+        </div>
+        <div class="form-line">
+          <div class="the-labels">
+            <label for="animal">Cats or Dogs:</label>
+          </div>
+          <div class="the-input">
+            <input type="radio" name="animal" value="cat" checked> Cat</input>
+            <input type="radio" name="animal" value="dog"> Dog</input>
+          </div>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    
+    <script src="./js/main.js"></script>
+  </body>
+</html>

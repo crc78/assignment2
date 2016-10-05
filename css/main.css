@@ -1,0 +1,18 @@
+body, html{
+  background-color: rgb(86, 201, 140);
+}
+.my-form{
+  margin: 50px 0 0 50px;
+}
+.form-line{
+  display:flex;
+  margin-bottom: 10px;
+}
+.the-labels, .the-input{
+  flex: 1;
+}
+label{
+  font-family: Georgia;
+  color: white;
+  font-size: 20px;
+}
