@@ -7,8 +7,8 @@
   </head>
   
   <body>
-    <div class="my-form">
-      <form>
+    <div id="formDiv" class="my-form">
+      <form id="theForm">
         <div class="form-line">
           <div class="the-labels">
             <label for="fname">First Name:</label>
@@ -50,11 +50,15 @@
             <input type="radio" name="animal" value="dog"> Dog</input>
           </div>
         </div>
-        <input type="button" onclick="submit()" value="Submit">
+        
       </form>
     </div>
-    
-    <div class="errors"></div>
+	
+	<div class="submit-div">
+      <input type="button" id="submitButton" onclick="submitForm()" value="Submit">
+	</div>
+	
+    <div class="errors" id="errorsDiv"></div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
