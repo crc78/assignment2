@@ -1,27 +1,22 @@
 function submitForm(){
-  //clear errors div and check for new errors. Display errors or clear form if correct
-  var first=document.getElementById("fname").value;
-  var last=document.getElementById("lname").value;
-  var age=document.getElementById("age").value;
-  var col=document.getElementById("color").value;
+  var inputs = document.forms.theForm.getElementsByTagName("input");
+  var errors = [];
   
-  if(first==null || first==""){
-    //add an error to errors div
+  for(var i=0; i<inputs.length; i++){
+	  if(inputs[i].value == "" || inputs[i].value == null){
+		errors.push("Error: "+inputs[i].name+" can't be blank.<br>");
+	  }
+	  else if(inputs[i].name == "age" && inputs[i].value<0){
+		  errors.push("Error: "+inputs[i].name+" must be a positive number.<br>");
+	  }
   }
   
-  if(last==null || last==""){
-    //add an error to errors div
+  if(errors.length == 0){
+	  document.getElementById("errorsDiv").innerHTML = "";
+	  document.getElementById("submitButton").style.display = 'none';
+	  document.getElementById("formDiv").innerHTML = "<span class='success'>Form submssion was a success!</span>";
   }
-  
-  if(age==null || age==""){
-    
-  }
-  
-  if(age<0){
-    //error about negative age
-  }
-  
-  if(col==null || col==""){
-    //add error to errors div
+  else{
+	  document.getElementById("errorsDiv").innerHTML = errors.join("");
   }
 }
